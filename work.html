@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>航空数据可视化</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <div class="header">
+        <h1>航空数据可视化大屏</h1>
+    </div>
+
+<div class="main" style="margin-top: 50px;">
+    <div class="show1">
+        <div class="column side-left">
+            <div id="mainMap" style="width: 90%;height: 900px;margin-top:-80px;"></div>
+                <div class="label-container" style="margin-top: -250px;margin-left: 200px" >
+                    北京出发航班抵达较多的城市
+                 </div>
+        </div>
+
+        <div class="column side-right">
+            <div class="column">
+                <div class="section" id="barChart" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="categoryChart" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="w" style="width: 100%; height: 230px;"></div>
+            </div>
+            <div class="column">
+                <div class="section" id="medalsChart" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="scatterChart" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="e" style="width: 100%; height: 230px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="show1" style="margin-top: 200px;">
+        <div class="column side-right">
+            <div class="column">
+                <div class="section" id="chart1" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="chart2" style="width: 100%; height: 230px;"></div>
+            </div>
+            <div class="column">
+                <div class="section" id="chart3" style="width: 100%; height: 230px;"></div>
+                <div class="section" id="chart4" style="width: 100%; height: 230px;"></div>
+            </div>
+        </div>
+
+        <div class="column side-left">
+            <div id="mainMap1" style="width: 90%;height: 900px;margin-top:-80px;"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item airport-count">
+            <div class="icon">✈️</div>
+            <div class="label">飞机总数</div>
+            <div class="data">15071</div>
+        </div>
+        <div class="item plane-count">
+            <div class="icon">🛫</div>
+            <div class="label">机场总数</div>
+            <div class="data">259</div>
+        </div>
+        <div class="item growth-rate">
+            <div class="icon">📈</div>
+            <div class="label">机场增长率</div>
+            <div class="data">2.6%</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="work.js"></script>
+</body>
+</html>
